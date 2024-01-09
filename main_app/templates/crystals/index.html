@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Crystal List</h1>
+
+{% for crystal in crystals %}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ crystal.name }}</span>
+        <p>Appearance: {{ crystal.appearance }}</p>
+        <p>Rarity: {{ crystal.rarity }}</p>
+        <p>Source: {{ crystal.source }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
