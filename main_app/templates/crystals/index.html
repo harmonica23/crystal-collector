@@ -5,13 +5,15 @@
 
 {% for crystal in crystals %}
 <div class="card">
+    <a href="{% url 'detail' crystal.id %}">
     <div class="card-content">
         <span class="card-title">{{ crystal.name }}</span>
-        <p>Appearance: {{ crystal.appearance }}</p>
+        <p>Appearance: {{ crystal.appearance|linebreaks }}</p>
         <p>Rarity: {{ crystal.rarity }}</p>
-        <p>Source: {{ crystal.source }}</p>
+        <p>Source: {{ crystal.source|linebreaks }}</p>
     </div>
-  </div>
+    </a>
+</div>
 {% endfor %}
 
 {% endblock %}

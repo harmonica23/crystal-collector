@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Shape List</h1>
+
+{% for shape in shape_list %}
+<a href="{% url 'shapes_detail' shape.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ shape.name }}</span>
+            <p> Formation: {{ shape.formation }} </p>
+        </div>
+    </div>
+</a>
+{% endfor %}
+
+{% endblock %}
+
